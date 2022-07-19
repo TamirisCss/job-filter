@@ -21,10 +21,10 @@ const Card = () => {
   return (
     <div>
       {jobInfo && (
-        <div>
+        <div className="container">
           {jobInfo.map((item) => (
             <div className="cardContainer" key={item.id}>
-              <div>
+              <div className="imgContainer">
                 <img src={item.logo} alt={item.company} />
               </div>
 

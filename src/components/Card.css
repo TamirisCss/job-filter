@@ -1,3 +1,8 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
 .cardContainer {
   width: 80%;
   margin: 0 auto;
@@ -18,7 +23,6 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-
 }
 
 .companyName h4 {
@@ -40,4 +44,31 @@
 
 .companyNameBox h3 {
   color: hsl(180, 14%, 20%);
+}
+
+@media screen and (max-width: 700px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 370px;
+  }
+  .imgContainer {
+    position: absolute;
+    top: -20%;
+  }
+  .companyNameBox {
+    margin: 0.7rem 0 2rem 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .cardContainer {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .cardContainer {
+    width: 270px;
+  }
 }

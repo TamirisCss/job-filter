@@ -14,3 +14,10 @@
   padding: 5px;
   border-radius: 3px;
 }
+
+@media screen and (max-width: 700px) {
+    .Languages {
+      bottom: 0;
+      left: 0;
+    }
+  }
