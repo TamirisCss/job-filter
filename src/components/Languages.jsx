@@ -1,8 +1,9 @@
 import React from "react";
+import "./Languages.css";
 
 const Languages = ({ languages }) => {
   return (
-    <div>
+    <div className="Languages">
       <ul>
         {languages.map((lang, index) => (
           <li key={index}>{lang}</li>

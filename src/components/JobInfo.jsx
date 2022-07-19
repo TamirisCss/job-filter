@@ -1,13 +1,14 @@
 import React from "react";
+import "./JobInfo.css";
 
 const JobInfo = ({ posted, contract, location }) => {
   return (
-    <div>
-      <div>
-        <span>{posted}</span>
-        <span>{contract}</span>
-        <span>{location}</span>
-      </div>
+    <div className="JobInfos">
+      <span>{posted}</span>
+      <div className="dot"></div>
+      <span>{contract}</span>
+      <div className="dot"></div>
+      <span>{location}</span>
     </div>
   );
 };

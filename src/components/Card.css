@@ -1,0 +1,43 @@
+.cardContainer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 2px 0px 7px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.companyNameBox {
+  margin-left: 1rem;
+}
+
+.companyName {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+.companyName h4 {
+  color: hsl(180, 29%, 50%);
+}
+
+.companyName div {
+  padding: 7px 5px 5px 5px;
+  border-radius: 8px;
+  border: none;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: hsl(180, 29%, 50%);
+  color: #fff;
+}
+.companyName .feat {
+  background-color: hsl(180, 14%, 20%);
+}
+
+.companyNameBox h3 {
+  color: hsl(180, 14%, 20%);
+}
