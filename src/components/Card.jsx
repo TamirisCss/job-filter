@@ -23,7 +23,10 @@ const Card = () => {
       {jobInfo && (
         <div className="container">
           {jobInfo.map((item) => (
-            <div className="cardContainer" key={item.id}>
+            <div
+              className={`cardContainer ${item.featured && "border"}`}
+              key={item.id}
+            >
               <div className="imgContainer">
                 <img src={item.logo} alt={item.company} />
               </div>
