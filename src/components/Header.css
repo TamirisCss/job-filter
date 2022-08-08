@@ -4,4 +4,5 @@
   height: 20vh;
   background-color: hsl(180, 29%, 50%);
   margin-bottom: 4rem;
+  position: relative;
 }

@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 const App = () => {
   const [jobInfo, setJobInfo] = useState();
+  const [filter, setFilter] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,25 +17,29 @@ const App = () => {
     fetchData();
   }, []);
 
+  const addToFilter = (e) => {
+    setFilter([...filter, e.target.innerHTML]);
+  };
+
+  const filterSearch = (job) => {
+    if (filter.length === 0) {
+      return true;
+    }
+
+    return filter.every((item) => job.languages.includes(item));
+  };
+
   return (
-    <div className="App">
+    <div>
       <Header />
-      <Filter />
+      <Filter filter={filter} />
+
       {jobInfo && (
         <div className="container">
-          {jobInfo.map((item) => (
-            <Card
-              id={item.id}
-              logo={item.logo}
-              featured={item.featured}
-              company={item.company}
-              newJob={item.new}
-              position={item.position}
-              posted={item.postedAt}
-              contract={item.contract}
-              location={item.location}
-              languages={item.languages}
-            />
+          {jobInfo.filter(filterSearch).map((job) => (
+            <div key={job.id}>
+              <Card addToFilter={addToFilter} job={job} />
+            </div>
           ))}
         </div>
       )}

@@ -2,43 +2,34 @@ import React from "react";
 
 import "./Card.css";
 
-const Card = ({
-  id,
-  featured,
-  logo,
-  company,
-  newJob,
-  position,
-  posted,
-  contract,
-  location,
-  languages,
-}) => {
+const Card = ({ job, addToFilter }) => {
   return (
-    <div className={`cardContainer ${featured && "border"}`} key={id}>
+    <div className={`cardContainer ${job.featured && "border"}`} key={job.id}>
       <div className="imgContainer">
-        <img src={logo} alt={company} />
+        <img src={job.logo} alt={job.company} />
       </div>
 
       <div className="companyNameBox">
         <div className="companyName">
-          <h4>{company}</h4>
-          {newJob && <div>NEW!</div>}
-          {featured && <div className="feat">FEATURED</div>}
+          <h4>{job.company}</h4>
+          {job.new && <div>NEW!</div>}
+          {job.featured && <div className="feat">FEATURED</div>}
         </div>
-        <h3>{position}</h3>
+        <h3>{job.position}</h3>
         <div className="JobInfos">
-          <span>{posted}</span>
+          <span>{job.posted}</span>
           <div className="dot"></div>
-          <span>{contract}</span>
+          <span>{job.contract}</span>
           <div className="dot"></div>
-          <span>{location}</span>
+          <span>{job.location}</span>
         </div>
       </div>
       <div className="Languages">
         <ul>
-          {languages.map((lang, index) => (
-            <li key={index}>{lang}</li>
+          {job.languages.map((lang, index) => (
+            <li className="cardList" onClick={addToFilter} key={index}>
+              {lang}
+            </li>
           ))}
         </ul>
       </div>
