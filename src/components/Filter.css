@@ -1,0 +1,12 @@
+.Languages .filterList {
+  pointer-events: none;
+}
+
+.filterContainer {
+  /* padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 2px 0px 7px rgba(0, 0, 0, 0.2); */
+  position: absolute;
+  top: 15%;
+  left: 7%;
+}
