@@ -4,7 +4,7 @@ import removeIcon from "../icons/icon-remove.svg";
 
 const Filter = ({ filter, removeFilter }) => {
   return (
-    <div className="Languages filterContainer">
+    <div className={`Languages ${filter.length > 0 && "filterContainer"}`}>
       <ul>
         {filter.map((item, index) => (
           <div className="filterBox">
@@ -23,6 +23,9 @@ const Filter = ({ filter, removeFilter }) => {
           </div>
         ))}
       </ul>
+      <span className={`clearBtnHide ${filter.length > 0 && "clearBtnShow"}`}>
+        clear
+      </span>
     </div>
   );
 };

@@ -3,12 +3,30 @@
 }
 
 .filterContainer {
-  /* padding: 1rem 2rem;
-  border-radius: 10px;
-  box-shadow: 2px 0px 7px rgba(0, 0, 0, 0.2); */
   position: absolute;
   top: 15%;
   left: 7%;
+  padding: 2px 0;
+  background-color: #fff;
+  margin-right: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 2px 0px 7px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clearBtnHide {
+  display: none;
+}
+.clearBtnShow {
+  display: block;
+  margin-right: 2rem;
+  cursor: pointer;
+  color: hsl(180, 29%, 50%);
+}
+.clearBtnShow:hover {
+  text-decoration: underline;
 }
 
 .filterBox {
