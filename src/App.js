@@ -27,7 +27,7 @@ const App = () => {
 
   const removeFilter = (e) => {
     filter.splice(filter.indexOf(e.target.id), 1);
-    console.log(filter)
+    console.log(filter);
     setFilter([...filter]);
   };
 
