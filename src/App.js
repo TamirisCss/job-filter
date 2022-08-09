@@ -25,6 +25,12 @@ const App = () => {
     setFilter([...filter, e.target.innerHTML]);
   };
 
+  const removeFilter = (e) => {
+    filter.splice(filter.indexOf(e.target.id), 1);
+    console.log(filter)
+    setFilter([...filter]);
+  };
+
   const filterSearch = (job) => {
     if (filter.length === 0) {
       return true;
@@ -36,7 +42,7 @@ const App = () => {
   return (
     <div>
       <Header />
-      <Filter filter={filter} />
+      <Filter filter={filter} removeFilter={removeFilter} />
 
       {jobInfo && (
         <div className="container">

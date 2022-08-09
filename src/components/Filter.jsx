@@ -2,7 +2,7 @@ import React from "react";
 import "./Filter.css";
 import removeIcon from "../icons/icon-remove.svg";
 
-const Filter = ({ filter }) => {
+const Filter = ({ filter, removeFilter }) => {
   return (
     <div className="Languages filterContainer">
       <ul>
@@ -12,7 +12,13 @@ const Filter = ({ filter }) => {
               {item}
             </li>
             <div className="iconBox">
-              <img className="removeIcon" src={removeIcon} alt="close" />
+              <img
+                onClick={removeFilter}
+                className="removeIcon"
+                src={removeIcon}
+                id={item}
+                alt="close"
+              />
             </div>
           </div>
         ))}
