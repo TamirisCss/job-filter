@@ -18,6 +18,10 @@ const App = () => {
   }, []);
 
   const addToFilter = (e) => {
+    //check if item alredy exist
+    if (filter.includes(e.target.innerHTML)) {
+      return false;
+    }
     setFilter([...filter, e.target.innerHTML]);
   };
 
