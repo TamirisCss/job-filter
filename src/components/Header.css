@@ -6,3 +6,15 @@
   margin-bottom: 4rem;
   position: relative;
 }
+
+@media screen and (max-width: 707px) {
+  .header {
+    margin-bottom: 6rem;
+  }
+}
+
+@media screen and (max-width: 422px) {
+  .header {
+    margin-bottom: 7.5rem;
+  }
+}

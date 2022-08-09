@@ -5,7 +5,7 @@ import removeIcon from "../icons/icon-remove.svg";
 const Filter = ({ filter, removeFilter, clearAllFilter }) => {
   return (
     <div className={`Languages ${filter.length > 0 && "filterContainer"}`}>
-      <ul>
+      <ul className="ulList">
         {filter.map((item, index) => (
           <div className="filterBox" key={index}>
             <li className="filterList">{item}</li>

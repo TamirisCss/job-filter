@@ -48,3 +48,22 @@
 .iconBox:hover {
   background-color: hsl(180, 14%, 20%);
 }
+
+@media screen and (max-width: 707px) {
+  .filterContainer {
+    height: 10vh;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 422px) {
+  .filterContainer {
+    height: 15vh;
+  }
+  .clearBtnShow {
+    margin-right: 0.8rem;
+  }
+  .ulList {
+    flex-wrap: wrap;
+  }
+}
