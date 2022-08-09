@@ -39,10 +39,18 @@ const App = () => {
     return filter.every((item) => job.languages.includes(item));
   };
 
+  const clearAllFilter = () => {
+    setFilter([]);
+  };
+
   return (
     <div>
       <Header />
-      <Filter filter={filter} removeFilter={removeFilter} />
+      <Filter
+        filter={filter}
+        removeFilter={removeFilter}
+        clearAllFilter={clearAllFilter}
+      />
 
       {jobInfo && (
         <div className="container">

@@ -2,15 +2,13 @@ import React from "react";
 import "./Filter.css";
 import removeIcon from "../icons/icon-remove.svg";
 
-const Filter = ({ filter, removeFilter }) => {
+const Filter = ({ filter, removeFilter, clearAllFilter }) => {
   return (
     <div className={`Languages ${filter.length > 0 && "filterContainer"}`}>
       <ul>
         {filter.map((item, index) => (
-          <div className="filterBox">
-            <li className="filterList" key={index}>
-              {item}
-            </li>
+          <div className="filterBox" key={index}>
+            <li className="filterList">{item}</li>
             <div className="iconBox">
               <img
                 onClick={removeFilter}
@@ -23,7 +21,10 @@ const Filter = ({ filter, removeFilter }) => {
           </div>
         ))}
       </ul>
-      <span className={`clearBtnHide ${filter.length > 0 && "clearBtnShow"}`}>
+      <span
+        onClick={clearAllFilter}
+        className={`clearBtnHide ${filter.length > 0 && "clearBtnShow"}`}
+      >
         clear
       </span>
     </div>
