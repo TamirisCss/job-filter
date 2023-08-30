@@ -5,12 +5,11 @@ import removeIcon from "../icons/icon-remove.svg";
 const Filter = ({ filter, removeFilter, clearAllFilter }) => {
   return (
     <>
-      {
-        filter.length === 0 ? (
-          <h2 className="noFilterMsg">
-            Any filter was applied, select any language to apply the filter.
-          </h2>
-        ) : (
+      {filter.length === 0 ? (
+        <h3 className="noFilterMsg">
+          No filter applied, select any language bellow to apply a filter.
+        </h3>
+      ) : (
         <div className={`Languages ${filter.length > 0 && "filterContainer"}`}>
           <ul className="ulList">
             {filter.map((item, index) => (
@@ -35,8 +34,7 @@ const Filter = ({ filter, removeFilter, clearAllFilter }) => {
             clear
           </span>
         </div>
-        )
-      }
+      )}
     </>
   );
 };
